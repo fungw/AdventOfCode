@@ -39,8 +39,6 @@ func processData() int {
 			meterD := queue.Front()
 			queue.Remove(meterD)
 
-			fmt.Println(meterA.Value, meterB.Value, meterC.Value, meterD.Value)
-
 			meterAInt := meterA.Value.(int)
 			meterBInt := meterB.Value.(int)
 			meterCInt := meterC.Value.(int)
@@ -56,8 +54,6 @@ func processData() int {
 			queue.PushBack(meterBInt)
 			queue.PushBack(meterCInt)
 			queue.PushBack(meterDInt)
-
-			fmt.Println(queue)
 		}
 	}
 
