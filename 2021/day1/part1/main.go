@@ -24,7 +24,7 @@ func (s stack) Pop() (stack, int) {
 }
 
 func processData() int {
-	file, err := os.Open("data.txt")
+	file, err := os.Open("../data.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -43,7 +43,6 @@ func processData() int {
 			meterReadingStack, meterA := meterReadingStack.Pop()
 			meterReadingStack, meterB := meterReadingStack.Pop()
 			if meterA > meterB {
-				fmt.Println(meterA, meterB)
 				increaseCount++
 			}
 		}
