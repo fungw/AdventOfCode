@@ -33,11 +33,18 @@ func processData() int {
 	defer file.Close()
 
 	scanner := bufio.NewScanner(file)
-	fmt.Println(scanner.Scan())
 
 	for scanner.Scan() {
-		s := fmt.Sprintf("%b", scanner.Text()[0])
-		fmt.Println(s)
+		var inputLine = scanner.Text()
+		for i := 0; i < len(inputLine); i++ {
+			var inputValue = inputLine[i]
+			if inputValue == 49 {
+				fmt.Print(1)
+			} else if inputValue == 48 {
+				fmt.Print(0)
+			}
+		}
+		fmt.Println()
 	}
 
 	return 0
