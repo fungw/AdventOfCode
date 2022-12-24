@@ -11,5 +11,3 @@ const highestCalorie = data.split('\n\n').reduce((acc, curr) => {
 const summedCaloriesPerElf = data.split('\n\n').map((test) => {
   return sum(test.split('\n'));
 }).sort((a, b) => b - a).slice(0, 3);
-
-console.log(sum(summedCaloriesPerElf));
